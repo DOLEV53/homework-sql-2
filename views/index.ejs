@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Time</title>
+</head>
+<body>
+<h1>My favorite coffee is: </h1>
+<% result.forEach((item)=> { %>
+    <h3>coffee name is :<%= item.name_of_coffe%>
+    </h3>
+    <h3>the color of coffee capsule is : <%= item.color_of_capsule%>
+    </h3>
+    <h3>the price for 1 capsule is : $<%= item.price_per_1_capsule%>
+    </h3>
+   
+    <a href="/delete/<%=item.id%>">🗑</a>
+    <%})%>
+
+    <button><a href="/add">Add new coffee type to the list </a></button>
+</body>
+</html>
